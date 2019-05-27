@@ -17,7 +17,6 @@ class Downloader():
         self.local_path = local_path
         self.bucket_name = bucket_name
         self.prefixes = list(exrex.generate(filter_path + r'%s' % filter))
-        print(self.prefixes)
 
     def run(self):
         s3 = boto3.resource('s3',
